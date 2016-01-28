@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Tt-1k-xSb">
+                                <rect key="frame" x="112" y="403" width="96" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6Tt-1k-xSb" secondAttribute="height" multiplier="1:1" id="rI0-71-yuO"/>
+                                </constraints>
+                                <state key="normal" image="luyin2.png"/>
+                                <state key="highlighted" image="luyin.png"/>
+                                <connections>
+                                    <action selector="btnDown:" destination="BYZ-38-t0r" eventType="touchDown" id="3Tq-cc-j9A"/>
+                                    <action selector="btnDragUp:" destination="BYZ-38-t0r" eventType="touchDragExit" id="foi-G9-QFL"/>
+                                    <action selector="btnUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5TO-G7-aY8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="请长按按钮进行语音识别，语音的时间必须在2秒到10分钟之间！" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T68-6p-tfh">
+                                <rect key="frame" x="49" y="122" width="224" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="XEi-5p-FFl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1wq-Qn-ID0">
+                                <rect key="frame" x="113" y="266" width="96" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1wq-Qn-ID0" secondAttribute="height" multiplier="1:1" id="UJU-ch-HSI"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Tt-1k-xSb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C5g-KQ-mqk"/>
+                            <constraint firstItem="6Tt-1k-xSb" firstAttribute="top" secondItem="1wq-Qn-ID0" secondAttribute="bottom" constant="41" id="VIJ-JG-ZOK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6Tt-1k-xSb" secondAttribute="bottom" constant="69" id="jKG-dr-koD"/>
+                            <constraint firstItem="T68-6p-tfh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ke2-ga-m41"/>
+                            <constraint firstItem="T68-6p-tfh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="102" id="lHJ-t2-s7x"/>
+                            <constraint firstItem="1wq-Qn-ID0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o6W-Ia-ISt"/>
+                            <constraint firstItem="1wq-Qn-ID0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="olA-7y-hdC"/>
+                            <constraint firstItem="6Tt-1k-xSb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="sFP-3N-B1X"/>
+                            <constraint firstItem="T68-6p-tfh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="ucU-9z-Ofe"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="recordBtn" destination="6Tt-1k-xSb" id="we0-rC-BAF"/>
+                        <outlet property="resultLabel" destination="T68-6p-tfh" id="iZ8-2b-vJI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="311" y="412"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="luyin.png" width="128" height="128"/>
+        <image name="luyin2.png" width="128" height="128"/>
+    </resources>
+</document>
